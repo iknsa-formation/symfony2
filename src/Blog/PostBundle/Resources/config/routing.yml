@@ -1,0 +1,7 @@
+blog_post_homepage:
+    path:     /post
+    defaults: { _controller: BlogPostBundle:Default:index }
+
+blog_post_show:
+    path:     /post/1
+    defaults: { _controller: BlogPostBundle:Default:show }
