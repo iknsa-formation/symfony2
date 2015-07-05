@@ -1,4 +1,4 @@
 services:
-#    blog_post.example:
-#        class: Blog\PostBundle\Example
-#        arguments: [@service_id, "plain_value", %parameter%]
+   blog_post.description:
+       class: Blog\PostBundle\DependencyInjection\DescriptionStrategy
+       # arguments: [description]

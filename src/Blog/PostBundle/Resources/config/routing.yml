@@ -1,7 +1,23 @@
-blog_post_homepage:
-    path:     /post
-    defaults: { _controller: BlogPostBundle:Default:index }
+post:
+    path:     /
+    defaults: { _controller: BlogPostBundle:Post:index }
 
-blog_post_show:
-    path:     /post/1
-    defaults: { _controller: BlogPostBundle:Default:show }
+post_new:
+    path:     /new
+    defaults: { _controller: BlogPostBundle:Post:new }
+
+post_create:
+    path:     /create
+    defaults: { _controller: BlogPostBundle:Post:create }
+
+post_show:
+    path:     /{id}
+    defaults: { _controller: BlogPostBundle:Post:show }
+
+post_edit:
+    path:     /{id}/edit
+    defaults: { _controller: BlogPostBundle:Post:edit }
+
+post_delete:
+    path:     /{id}/delete
+    defaults: { _controller: BlogPostBundle:Post:delete }

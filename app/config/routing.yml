@@ -1,7 +1,14 @@
+blog_user:
+    resource: "@BlogUserBundle/Resources/config/routing.yml"
+    prefix:   /
+
 blog_app:
     resource: "@BlogAppBundle/Resources/config/routing.yml"
     prefix:   /
 
 blog_post:
     resource: "@BlogPostBundle/Resources/config/routing.yml"
-    prefix:   /
+    prefix:   /post/
+
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
