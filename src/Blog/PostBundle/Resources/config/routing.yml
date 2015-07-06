@@ -11,8 +11,10 @@ post_create:
     defaults: { _controller: BlogPostBundle:Post:create }
 
 post_show:
-    path:     /{id}
-    defaults: { _controller: BlogPostBundle:Post:show }
+    path:     /show/{id}
+    defaults: { _controller: BlogPostBundle:Post:show, id: 1 }
+    requirements:
+        id: \d+
 
 post_edit:
     path:     /{id}/edit
