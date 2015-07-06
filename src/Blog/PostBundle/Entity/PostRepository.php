@@ -12,4 +12,18 @@ use Doctrine\ORM\EntityRepository;
  */
 class PostRepository extends EntityRepository
 {
+    public function findThird()
+    {
+      $qb = $this->createQueryBuilder('p');
+
+      $qb
+        ->where('p.id = :id')
+        ->setParameter('id', 3)
+      ;
+
+      return $qb
+        ->getQuery()
+        ->getResult()
+      ;
+    }
 }

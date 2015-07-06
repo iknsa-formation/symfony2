@@ -29,7 +29,7 @@ class PostController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
-        $entities = $em->getRepository('BlogPostBundle:Post')->findAll();
+        $entities = $em->getRepository('BlogPostBundle:Post')->findThird();
 
         return array(
             'entities' => $entities,
@@ -45,12 +45,16 @@ class PostController extends Controller
     public function createAction(Request $request)
     {
         $entity = new Post();
+        
         $descriptionStrategy = $this->get('blog_post.description');
+
         $form = $this->createCreateForm($entity);
         $form->handleRequest($request);
 
         if ($form->isValid()) {
+
             $descriptionStrategy->descriptionStrategy($entity->getDescription());
+
             $em = $this->getDoctrine()->getManager();
             $entity->setUser($this->getUser());
             $em->persist($entity);
