@@ -10,4 +10,9 @@ class DefaultController extends Controller
     {
         return $this->render('BlogAppBundle:Default:index.html.twig', array());
     }
+
+    public function navAction()
+    {
+        return $this->render('BlogAppBundle::nav.html.twig');
+    }
 }

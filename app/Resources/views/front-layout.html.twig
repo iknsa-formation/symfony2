@@ -16,8 +16,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!---start-wrap---->
 <div class="wrap">
 
-{% include 'BlogAppBundle::nav.html.twig' %}
-
+{# include 'BlogAppBundle::nav.html.twig' #}
+{{ render(controller('BlogAppBundle:Default:nav')) }}
 
 {% block body %}{% endblock %}
 
